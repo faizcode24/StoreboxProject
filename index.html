@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wanderlust - Explore The World</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container navbar">
+
+            <a href="#" class="logo">
+                Wander<span>lust</span>
+            </a>
+
+            <nav id="navMenu">
+                <a href="#home">Home</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#experiences">Experiences</a>
+                <a href="#about">About</a>
+            </nav>
+
+            <button class="book-btn" onclick="openBooking()">
+                Book a Trip
+            </button>
+
+            <button class="menu-btn" onclick="toggleMenu()">
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+
+            <p class="eyebrow">DISCOVER THE WORLD</p>
+
+            <h1>
+                Travel beyond<br>
+                <span>the ordinary.</span>
+            </h1>
+
+            <p class="hero-text">
+                Discover breathtaking places, unforgettable experiences,
+                and journeys that stay with you forever.
+            </p>
+
+            <div class="search-box">
+
+                <div class="search-item">
+                    <span>📍</span>
+                    <div>
+                        <small>Destination</small>
+                        <strong id="destinationText">Where to?</strong>
+                    </div>
+                </div>
+
+                <div class="search-item">
+                    <span>📅</span>
+                    <div>
+                        <small>Travel Date</small>
+                        <input type="date" id="travelDate">
+                    </div>
+                </div>
+
+                <div class="search-item">
+                    <span>👥</span>
+                    <div>
+                        <small>Travelers</small>
+                        <select id="travelers">
+                            <option>1 Traveler</option>
+                            <option>2 Travelers</option>
+                            <option>3 Travelers</option>
+                            <option>4 Travelers</option>
+                            <option>5+ Travelers</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="search-btn" onclick="searchTrips()">
+                    Search
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Destinations -->
+    <section class="section" id="destinations">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow dark">POPULAR DESTINATIONS</p>
+
+                    <h2>
+                        Places worth<br>
+                        <em>discovering.</em>
+                    </h2>
+                </div>
+
+                <p>
+                    From hidden beaches to ancient cities,
+                    explore destinations made for unforgettable memories.
+                </p>
+            </div>
+
+
+            <div class="destination-grid">
+
+                <article class="destination-card large-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=80"
+                        alt="Bali"
+                    >
+
+                    <div class="card-content">
+                        <span>INDONESIA</span>
+                        <h3>Bali</h3>
+                        <p>Island of the Gods</p>
+                    </div>
+
+                </article>
+
+
+                <article class="destination-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80"
+                        alt="India"
+                    >
+
+                    <div class="card-content">
+                        <span>INDIA</span>
+                        <h3>Agra</h3>
+                        <p>History & culture</p>
+                    </div>
+
+                </article>
+
+
+                <article class="destination-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+                        alt="Maldives"
+                    >
+
+                    <div class="card-content">
+                        <span>MALDIVES</span>
+                        <h3>Maldives</h3>
+                        <p>Tropical paradise</p>
+                    </div>
+
+                </article>
+
+
+                <article class="destination-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995?auto=format&fit=crop&w=800&q=80"
+                        alt="Paris"
+                    >
+
+                    <div class="card-content">
+                        <span>FRANCE</span>
+                        <h3>Paris</h3>
+                        <p>The city of lights</p>
+                    </div>
+
+                </article>
+
+
+                <article class="destination-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=800&q=80"
+                        alt="Thailand"
+                    >
+
+                    <div class="card-content">
+                        <span>THAILAND</span>
+                        <h3>Phuket</h3>
+                        <p>Adventure awaits</p>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Experiences -->
+    <section class="experiences" id="experiences">
+
+        <div class="container">
+
+            <div class="experience-heading">
+                <p class="eyebrow">TRAVEL DIFFERENTLY</p>
+
+                <h2>
+                    More than a trip.<br>
+                    <em>It's a story.</em>
+                </h2>
+            </div>
+
+
+            <div class="experience-grid">
+
+                <div class="experience">
+                    <div class="experience-icon">🌅</div>
+                    <h3>Curated Journeys</h3>
+                    <p>
+                        Handpicked experiences designed around
+                        how you love to travel.
+                    </p>
+                </div>
+
+                <div class="experience">
+                    <div class="experience-icon">🧭</div>
+                    <h3>Local Experts</h3>
+                    <p>
+                        Travel with people who know every hidden
+                        corner of your destination.
+                    </p>
+                </div>
+
+                <div class="experience">
+                    <div class="experience-icon">✨</div>
+                    <h3>Unforgettable Moments</h3>
+                    <p>
+                        Create memories that become stories
+                        you'll tell for years.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <div class="container about-grid">
+
+            <div class="about-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=80"
+                    alt="Travel landscape"
+                >
+
+                <div class="experience-badge">
+                    <strong>12+</strong>
+                    <span>Years of<br>exploration</span>
+                </div>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <p class="eyebrow dark">WHY WANDERLUST</p>
+
+                <h2>
+                    We believe the<br>
+                    <em>world is your story.</em>
+                </h2>
+
+                <p>
+                    We create thoughtfully designed journeys for curious
+                    travelers who want to experience the world differently.
+                    From local food to hidden landscapes, every detail
+                    is planned to make your journey memorable.
+                </p>
+
+                <button class="outline-btn" onclick="openBooking()">
+                    Start Exploring →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta">
+
+        <div class="container">
+
+            <p class="eyebrow">YOUR NEXT ADVENTURE</p>
+
+            <h2>
+                Where will you<br>
+                <em>go next?</em>
+            </h2>
+
+            <button class="light-btn" onclick="openBooking()">
+                Plan My Trip
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="container footer-grid">
+
+            <div>
+                <a href="#" class="logo">
+                    Wander<span>lust</span>
+                </a>
+
+                <p>
+                    Travel further. Experience more.
+                    Live unforgettable stories.
+                </p>
+            </div>
+
+            <div>
+                <h4>Explore</h4>
+                <a href="#destinations">Destinations</a>
+                <a href="#experiences">Experiences</a>
+                <a href="#about">About Us</a>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p>hello@wanderlust.com</p>
+                <p>+91 98765 43210</p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Wanderlust. All rights reserved.
+        </div>
+
+    </footer>
+
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+
+        <div class="modal-content">
+
+            <button class="close-btn" onclick="closeBooking()">
+                ×
+            </button>
+
+            <p class="eyebrow dark">PLAN YOUR JOURNEY</p>
+
+            <h2>
+                Let's start<br>
+                <em>exploring.</em>
+            </h2>
+
+            <form id="bookingForm">
+
+                <input
+                    type="text"
+                    placeholder="Your name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    placeholder="Email address"
+                    required
+                >
+
+                <select required>
+                    <option value="">Choose destination</option>
+                    <option>Bali</option>
+                    <option>Agra</option>
+                    <option>Maldives</option>
+                    <option>Paris</option>
+                    <option>Phuket</option>
+                </select>
+
+                <input
+                    type="date"
+                    required
+                >
+
+                <button class="submit-btn" type="submit">
+                    Send Enquiry
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="index.js"></script>
+
+</body>
+</html>
